@@ -1,0 +1,36 @@
+### Add a new book
+POST {{LibraryManagementSystemAPI_HostAddress}}/api/books
+Content-Type: application/json
+
+{
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "isbn": "1234567890",
+  "isAvailable": true
+}
+
+### Get all books
+GET {{LibraryManagementSystemAPI_HostAddress}}/api/books
+Accept: application/json
+
+### Get book by title
+GET {{LibraryManagementSystemAPI_HostAddress}}/api/books/Gatsby
+Accept: application/json
+
+### Get book by ISBN
+GET {{LibraryManagementSystemAPI_HostAddress}}/api/books/isbn/1234567890
+Accept: application/json
+
+### Update book
+PUT {{LibraryManagementSystemAPI_HostAddress}}/api/books/1234567890
+Content-Type: application/json
+
+{
+  "title": "The Great Gatsby",
+  "author": "Fitzgerald",
+  "isbn": "1234567890",
+  "isAvailable": false
+}
+
+### Delete book
+DELETE {{LibraryManagementSystemAPI_HostAddress}}/api/books/1234567890
